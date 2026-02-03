@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-background: #F4D04E;
+    --cor-text: #111111;
+    --cor-text-accent: #6b6b6b;
+    --cor-card: #ffffff;
+
+    --fonte-principal: 'Figtree', sans-serif;
+    --peso-normal: 500;
+    --peso-bold: 800;
+}
+
+body {
+    background-color: var(--cor-background);
+    font-family: var(--fonte-principal);
+    font-weight: var(--peso-normal);
+
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;    
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--cor-card);
+    padding: 24px;
+    border-radius: 20px;
+    width: 384px;
+    height: 522px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid var(--cor-text);
+    box-shadow: 8px 8px 0 var(--cor-text);
+    transition: 0.3s;
+}
+
+.img-principal {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.badge {
+    font-size: 0.9rem;
+    font-weight: var(--peso-bold);
+    padding: 4px 12px;
+    background-color: var(--cor-background);
+    border-radius: 4px;
+    width: auto;
+    align-self: flex-start;
+}
+
+.data-publicacao {
+    font-size: 0.8rem;
+    color: var(--cor-text);
+}
+
+.informacoes a {
+    text-decoration: none;
+    color: var(--cor-text);
+    transition: 0.3s;
+}
+
+.informacoes h2 {
+    font-size: 1.5rem;
+    font-weight: var(--peso-bold);
+}
+
+.informacoes p {
+    font-size: 0.9rem;
+    color: var(--cor-text-accent);
+}
+
+.assinatura {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: auto;
+    height: auto;
+}
+
+.assinatura img {
+    height: 32px;
+    aspect-ratio: 1/1;
+}
+
+.assinatura p {
+    color: var(--cor-text);
+    font-weight: var(--peso-bold);
+    font-size: 0.7rem;
+}
+
+@media (hover: hover) {
+    .informacoes a:hover {
+       cursor: pointer;
+       color: var(--cor-background);
+    }
+
+    .card:hover {
+        box-shadow: 12px 12px 0 var(--cor-text);        
+    }
+}
